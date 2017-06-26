@@ -1,57 +1,44 @@
-import 'rxjs/add/operator/switchMap';
-import { Component, OnInit }      from '@angular/core';
-import { ActivatedRoute, Params } from '@angular/router';
-import { Location }               from '@angular/common';
+import { Component, OnInit,Input } from '@angular/core';
+import { MdDialog, MdDialogRef } from '@angular/material';
 
 import { DataService } from '../data.service'
+import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.component'
 
 @Component({
-  selector: 'app-student-class-form',
-  templateUrl: './student-class-form.component.html',
-  styleUrls: ['./student-class-form.component.css']
+  selector: 'app-student-class',
+  templateUrl: './student-class.component.html',
+  styleUrls: ['./student-class.component.css'],
 })
-export class StudentClassFormComponent implements OnInit {
+export class StudentClassComponent implements OnInit {
 
-  successMessage: string;
   errorMessage: string;
-
-  studentclass: object = {};
-
-  getRecordForEdit(){
-    this.route.params
-      .switchMap((params: Params) => this.dataService.getRecord("student_class", +params['id']))
-      .subscribe(studentclass => this.studentclass = studentclass);
+  successMessage: string;
+  studentclass: any[];
+  mode = 'Observable';
+ 
+  constructor (private dataService: DataService, public dialog: MdDialog) {}
+ 
+  ngOnInit() { this.getStudentClass(); }
+ 
+  getStudentClass() {
+    this.dataService.getRecords("student_class")
+      .subscribe(
+        studentclass => this.studentclass = studentclass,
+        error =>  this.errorMessage = <any>error);
   }
 
-  constructor(
-    private dataService: DataService,
-    private route: ActivatedRoute,
-    private location: Location
-  ) {}
+  deleteStudentClass(id:number) {
 
-  ngOnInit() {
-    this.route.params
-      .subscribe((params: Params) => {
-        (+params['id']) ? this.getRecordForEdit() : null;
-      });
-  
-  }
+    let dialogRef = this.dialog.open(DeleteConfirmComponent);
 
-  saveStudentClass(id){
-    if(typeof id === "number"){
-      this.dataService.editRecord("student_class", this.studentclass, id)
+    dialogRef.afterClosed().subscribe(result => {
+      if(result){
+        this.dataService.deleteRecord("student_class", id)
           .subscribe(
-            studentclass => this.successMessage = "Record updated succesfully",
+            studentclass => {this.successMessage = "Record(s) deleted succesfully"; this.getStudentClass(); },
             error =>  this.errorMessage = <any>error);
-    }else{
-      this.dataService.addRecord("student_class", this.studentclass)
-          .subscribe(
-            studentclass => this.successMessage = "Record added succesfully",
-            error =>  this.errorMessage = <any>error);
-    }
-
-    this.studentclass = {};
-    
+      }
+    });
   }
 
 }
