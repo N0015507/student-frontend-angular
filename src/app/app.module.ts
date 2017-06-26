@@ -29,23 +29,6 @@ import { InstructorComponent } from './instructor/instructor.component';
 import { AssignmentComponent } from './assignment/assignment.component';
 import { ClassComponent } from './class/class.component';
 
-// import { ClassComponent } from './class/class.component';
-// import { ClassFormComponent } from './class-form/class-form.component';
-
-// import { AssignmentComponent } from './assignment/assignment.component';
-// import { AssignmentFormComponent } from './assignment-form/assignment-form.component';
-
-// import { InstructorComponent } from './instructor/instructor.component';
-// import { InstructorFormComponent } from './instructor-form/instructor-form.component';
-
-// import { MajorComponent } from './major/major.component';
-// import { MajorFormComponent } from './major-form/major-form.component';
-
-// import { MajorClassComponent } from './major_class/major_class.component';
-// import { MajorClassFormComponent } from './major_class-form/major_class-form.component';
-
-// import { StudentClassComponent } from './student_class/student_class.component';
-// import { StudentClassFormComponent } from './student_class-form/student_class-form.component';
 
 
 
@@ -72,18 +55,7 @@ import { ClassComponent } from './class/class.component';
     InstructorComponent,
     AssignmentComponent,
     ClassComponent,
-    // ClassComponent,
-    // ClassFormComponent,
-    // AssignmentComponent,
-    // AssignmentFormComponent,
-    // InstructorComponent,
-    // InstructorFormComponent,
-    // MajorComponent,
-    // MajorFormComponent,
-    // MajorClassComponent,
-    // MajorClassFormComponent,
-    // StudentClassComponent,
-    // StudentClassFormComponent
+
   ],
   imports: [
     BrowserModule,

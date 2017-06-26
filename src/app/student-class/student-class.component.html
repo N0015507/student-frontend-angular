@@ -26,10 +26,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let student_class of student_class">
+    <tr *ngFor="let student_class of studentclass">
       <td>{{student_class.student_class_id}}</td>
-      <td>{{student_class.student_id}}</td>
-      <td>{{student_class.student_id}}</td>
+      <td>{{student_class.student?.last_name}}</td>
+      <td>{{student_class.student?.subject}}</td>
       <td class="text-center">
         <a class="btn btn-primary" [routerLink]="['/student-class/edit/', student_class.student_class_id]">Edit</a>&nbsp;
         <button (click)="deleteStudentClass(student_class.student_class_id)" class="btn btn-danger">Delete</button>
