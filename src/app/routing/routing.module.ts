@@ -13,12 +13,12 @@ import { GradeFormComponent }   from '../grade-form/grade-form.component';
 // import { ClassFormComponent }   from '../class-form/class-form.component';
 
 
-// import { AssignmentComponent }   from '../assignment/assignment.component';
-// import { AssignmentFormComponent }   from '../assignment-form/assignment-form.component';
+import { AssignmentComponent }   from '../assignment/assignment.component';
+import { AssignmentFormComponent }   from '../assignment-form/assignment-form.component';
 
 
-// import { InstructorComponent }   from '../instructor/instructor.component';
-// import { InstructorFormComponent }   from '../instructor-form/instructor-form.component';
+import { InstructorComponent }   from '../instructor/instructor.component';
+import { InstructorFormComponent }   from '../instructor-form/instructor-form.component';
 
 // import { MajorComponent }   from '../major/major.component';
 // import { MajorFormComponent }   from '../major-form/major-form.component';
@@ -47,13 +47,13 @@ const routes: Routes = [
   // { path: 'class/edit/:id', component: ClassFormComponent },
   // { path: 'class/add', component: ClassFormComponent },
 
-  // { path: 'assignment',  component: AssignmentComponent },
-  // { path: 'assignment/edit/:id', component: AssignmentFormComponent },
-  // { path: 'assignment/add', component: AssignmentFormComponent },
+  { path: 'assignment',  component: AssignmentComponent },
+  { path: 'assignment/edit/:id', component: AssignmentFormComponent },
+  { path: 'assignment/add', component: AssignmentFormComponent },
 
-  // { path: 'instructor',  component: InstructorComponent },
-  // { path: 'instructor/edit/:id', component: InstructorFormComponent },
-  // { path: 'instructor/add', component: InstructorFormComponent },
+  { path: 'instructor',  component: InstructorComponent },
+  { path: 'instructor/edit/:id', component: InstructorFormComponent },
+  { path: 'instructor/add', component: InstructorFormComponent },
 
   // { path: 'major',  component: MajorComponent },
   // { path: 'major/edit/:id', component: MajorFormComponent },
