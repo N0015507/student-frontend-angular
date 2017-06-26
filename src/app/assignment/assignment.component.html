@@ -30,10 +30,10 @@
   <tbody>
     <tr *ngFor="let assignment of assignments">
       <td>{{assignment.assignment_id}}</td>
-      <td>{{assignment.student_id}}</td>
+      <td>{{assignment.student?.student_id}}</td>
       <td>{{assignment.assignment_nbr}}</td>
-      <td>{{assignment.grade_id}}</td>
-      <td>{{assignment.class_id}}</td>
+      <td>{{assignment.grade?.grade_id}}</td>
+      <td>{{assignment.class?.subject}}</td>
       <td class="text-center">
         <a class="btn btn-primary" [routerLink]="['/assignment/edit/', assignment.assignment_id]">Edit</a>&nbsp;
         <button (click)="deleteAssignment(assignment.assignment_id)" class="btn btn-danger">Delete</button>
