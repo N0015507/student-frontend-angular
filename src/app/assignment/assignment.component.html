@@ -32,7 +32,7 @@
       <td>{{assignment.assignment_id}}</td>
       <td>{{assignment.student_id}}</td>
       <td>{{assignment.assignment_nbr}}</td>
-      <td>{{assignment.grade_id}}</td>
+      <td>{{assignment.grade?.grade}}</td>
       <td>{{assignment.class_id}}</td>
       <td class="text-center">
         <a class="btn btn-primary" [routerLink]="['/assignment/edit/', assignment.assignment_id]">Edit</a>&nbsp;

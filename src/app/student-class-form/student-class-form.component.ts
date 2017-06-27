@@ -18,6 +18,7 @@ export class StudentClassFormComponent implements OnInit {
   studentclass: object = {};
 
   getRecordForEdit(){
+    console.log("in student class form component getRecordForEdit");
     this.route.params
       .switchMap((params: Params) => this.dataService.getRecord("student_class", +params['id']))
       .subscribe(studentclass => this.studentclass = studentclass);
@@ -34,7 +35,7 @@ export class StudentClassFormComponent implements OnInit {
       .subscribe((params: Params) => {
         (+params['id']) ? this.getRecordForEdit() : null;
       });
-  
+      
   }
 
   saveStudentClass(id){
@@ -46,7 +47,7 @@ export class StudentClassFormComponent implements OnInit {
     }else{
       this.dataService.addRecord("student_class", this.studentclass)
           .subscribe(
-            studentrclass => this.successMessage = "Record added succesfully",
+            studentclass => this.successMessage = "Record added succesfully",
             error =>  this.errorMessage = <any>error);
     }
 
