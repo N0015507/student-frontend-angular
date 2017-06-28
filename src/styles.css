@@ -6,6 +6,21 @@ table {
     width: 150px;
 }
 
+.wrapper{
+  position:relative;
+}
+.big-img{
+  width: 100%;
+  max-width: 100%;
+}
+  
+.small-img{
+  position:absolute;
+  right: 43%;
+  top: 63%;
+  width: 15%;
+}
+
 
 /* massages the top hero image */
 
