@@ -12,6 +12,7 @@
     </button>
 </div>
 
+<br><br><br>
 <h2>Classes</h2>
 
 <a class="btn btn-primary" routerLink="/class/add">Add Class</a>
@@ -29,7 +30,7 @@
   <tbody>
     <tr *ngFor="let classy of classes">
       <td>{{classy.class_id}}</td>
-      <td>{{classy.instructor_id}}</td>
+      <td>{{classy.instructor?.last_name + ", " + classy.instructor?.first_name}}</td>
       <td>{{classy.subject}}</td>
       <td>{{classy.course}}</td>
       <td class="text-center">

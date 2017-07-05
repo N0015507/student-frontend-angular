@@ -64,8 +64,8 @@ const routes: Routes = [
   { path: 'student-class/add', component: StudentClassFormComponent },
 
   { path: 'major-class',  component: MajorClassComponent },
-  { path: 'major-class/edit/:id', component: MajorClassComponent },
-  { path: 'major-class/add', component: MajorClassComponent }
+  { path: 'major-class/edit/:id', component: MajorClassFormComponent },
+  { path: 'major-class/add', component: MajorClassFormComponent }
 
 ];
  

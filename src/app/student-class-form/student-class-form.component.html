@@ -6,6 +6,7 @@
 
 <br/>
 
+<br><br><br>
 <a class="btn btn-primary" routerLink="/student-class">Return to Student_Class</a>
 
 <h1>Manage Student_Class</h1>
@@ -19,7 +20,8 @@
 
 <!-- Hidden student_class_id  -->
 <form (ngSubmit)="saveStudentClass(student_class.student_class_id)"  #studentClassForm="ngForm" class="form-horizontal">
-  <input [(ngModel)]="student_class.student_class_id" type="hidden" name="student_class_id">
+
+  <input [(ngModel)]="student_class.student_class_id"  type="hidden" name="student_class_id">
 
   <!-- student_id  -->
   <div class="form-group">
