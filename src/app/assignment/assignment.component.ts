@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
+
 
 import { DataService } from '../data.service'
 import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.component'
@@ -15,7 +16,7 @@ export class AssignmentComponent implements OnInit {
   successMessage: string;
   assignments: any[];
   mode = 'Observable';
- 
+
   constructor (private dataService: DataService, public dialog: MdDialog) {}
  
   ngOnInit() { this.getAssignments(); }
@@ -24,7 +25,7 @@ export class AssignmentComponent implements OnInit {
     this.dataService.getRecords("assignment")
       .subscribe(
         assignments => this.assignments = assignments,
-        error =>  this.errorMessage = <any>error);
+        error =>  this.errorMessage = <any>error);  
   }
 
   deleteAssignment(id:number) {

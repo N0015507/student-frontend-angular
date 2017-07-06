@@ -2,13 +2,15 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
+import { fadeInAnimation } from '../animations/fade-in.animation';
 
 import { DataService } from '../data.service'
 
 @Component({
   selector: 'app-grade-form',
   templateUrl: './grade-form.component.html',
-  styleUrls: ['./grade-form.component.css']
+  styleUrls: ['./grade-form.component.css'],
+    animations: [fadeInAnimation]
 })
 export class GradeFormComponent implements OnInit {
 

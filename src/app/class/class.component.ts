@@ -1,5 +1,6 @@
-import { Component, OnInit,Input } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
+import { fadeInAnimation } from '../animations/fade-in.animation';
 
 import { DataService } from '../data.service'
 import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.component'
@@ -8,6 +9,7 @@ import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.compone
   selector: 'app-class',
   templateUrl: './class.component.html',
   styleUrls: ['./class.component.css'],
+  animations: [fadeInAnimation]
 })
 export class ClassComponent implements OnInit {
 
