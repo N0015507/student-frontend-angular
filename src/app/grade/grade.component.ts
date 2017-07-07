@@ -9,7 +9,7 @@ import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.compone
   selector: 'app-grade',
   templateUrl: './grade.component.html',
   styleUrls: ['./grade.component.css'],
-    animations: [fadeInAnimation]
+  animations: [fadeInAnimation]
 })
 export class GradeComponent implements OnInit {
 

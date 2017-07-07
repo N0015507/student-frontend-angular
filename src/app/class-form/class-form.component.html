@@ -39,7 +39,7 @@
   <div class="form-group">
     <label for="subject" class="col-sm-2 control-label">Subject</label>
     <div class="col-sm-10">
-      <input [(ngModel)]="classy.subject" type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required>
+      <input [(ngModel)]="classy.subject" type="text" class="form-control" id="subject" name="subject" placeholder="Subject" required maxLength="30">
         <span *ngIf="formErrors.subject" class="text-danger">
           {{ formErrors.subject}}
         </span>

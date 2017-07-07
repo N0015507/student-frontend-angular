@@ -38,7 +38,8 @@ export class InstructorComponent implements OnInit {
         this.dataService.deleteRecord("instructor", id)
           .subscribe(
             instructor => {this.successMessage = "Record(s) deleted succesfully"; this.getInstructor(); },
-            error =>  this.errorMessage = <any>error);
+             error =>  (this.errorMessage = '***** POSSIBLE FOREIGN KEY CONSTRAINT ******     ' + <any>error));
+            //error =>  {(this.errorMessage = 'test'), console.log(this.errorMessage) });
       }
     });
   }

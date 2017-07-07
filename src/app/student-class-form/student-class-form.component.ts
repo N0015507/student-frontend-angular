@@ -1,5 +1,5 @@
 import 'rxjs/add/operator/switchMap';
-
+import { fadeInAnimation } from '../animations/fade-in.animation';
 import { Component, OnInit, ViewChild }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
@@ -11,7 +11,8 @@ import { DataService } from '../data.service'
 @Component({
   selector: 'app-student-class-form',
   templateUrl: './student-class-form.component.html',
-  styleUrls: ['./student-class-form.component.css']
+  styleUrls: ['./student-class-form.component.css'],
+  animations: [fadeInAnimation]
 })
 export class StudentClassFormComponent implements OnInit {
 

@@ -11,7 +11,7 @@ import { DataService } from '../data.service'
   selector: 'app-class-form',
   templateUrl: './class-form.component.html',
   styleUrls: ['./class-form.component.css'],
-    animations: [fadeInAnimation]
+  animations: [fadeInAnimation]
 })
 export class ClassFormComponent implements OnInit {
 

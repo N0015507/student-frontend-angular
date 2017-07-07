@@ -51,7 +51,6 @@ export class DataService {
             .catch(this.handleError);
     }
 
-
     private extractData(res: Response) {
         let results = res.json();
         return results || [];

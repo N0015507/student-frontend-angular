@@ -10,7 +10,7 @@ import { DataService } from '../data.service'
   selector: 'app-grade-form',
   templateUrl: './grade-form.component.html',
   styleUrls: ['./grade-form.component.css'],
-    animations: [fadeInAnimation]
+  animations: [fadeInAnimation]
 })
 export class GradeFormComponent implements OnInit {
 

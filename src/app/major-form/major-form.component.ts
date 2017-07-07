@@ -2,13 +2,14 @@ import 'rxjs/add/operator/switchMap';
 import { Component, OnInit }      from '@angular/core';
 import { ActivatedRoute, Params } from '@angular/router';
 import { Location }               from '@angular/common';
-
+import { fadeInAnimation } from '../animations/fade-in.animation';
 import { DataService } from '../data.service'
 
 @Component({
   selector: 'app-major-form',
   templateUrl: './major-form.component.html',
-  styleUrls: ['./major-form.component.css']
+  styleUrls: ['./major-form.component.css'],
+  animations: [fadeInAnimation]
 })
 export class MajorFormComponent implements OnInit {
 

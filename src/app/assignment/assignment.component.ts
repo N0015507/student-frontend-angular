@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { MdDialog, MdDialogRef } from '@angular/material';
-
+import { fadeInAnimation } from '../animations/fade-in.animation';
 
 import { DataService } from '../data.service'
 import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.component'
@@ -9,6 +9,7 @@ import { DeleteConfirmComponent } from '../delete-confirm/delete-confirm.compone
   selector: 'app-assignment',
   templateUrl: './assignment.component.html',
   styleUrls: ['./assignment.component.css'],
+  animations: [fadeInAnimation]
 })
 export class AssignmentComponent implements OnInit {
 
